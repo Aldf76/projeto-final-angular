@@ -17,4 +17,8 @@ export class HomeComponent {
       state: {usuario: 'Carlos', nivel: 'admin'},
     })
   }
+  checarListaF(){
+    this.router.navigate(['/listaF'],{
+    })
+  }
 }
