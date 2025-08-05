@@ -8,6 +8,8 @@ import { CadastroFuncionario } from './components/cadastro-funcionario/cadastro-
 import { AdminComponent } from './components/admin.component/admin.component';
 import { ConfigComponent } from './components/config/config.component';
 import { HomeComponent } from './components/home/home.component';
+import { ListaFuncionariosComponent } from './components/lista-funcionarios/lista-funcionarios.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { HomeComponent } from './components/home/home.component';
     CadastroFuncionario,
     AdminComponent,
     ConfigComponent,
-    HomeComponent
+    HomeComponent,
+    ListaFuncionariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
