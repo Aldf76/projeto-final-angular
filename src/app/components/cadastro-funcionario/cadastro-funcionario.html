@@ -1,0 +1,34 @@
+<form [formGroup]="loginForm" (ngSubmit)="enviar()">
+    <input type="string" formControlName="nomeCompleto" placeholder="Nome Completo" />
+    <br>
+    <input type="number" formControlName="salario" placeholder="Salário pretendido" />
+    <br>
+    <input type="string" formControlName="cargo" placeholder="Cargo pretendido">
+    <br>
+    <input type="number" formControlName="nDependentes" placeholder="Número de Dependentes">
+    <br>
+    <!--radio button-->
+    <label>
+        <input type="radio" formControlName="VT" [value]="true" /> Sim
+      </label>
+      <label>
+        <input type="radio" formControlName="VT" [value]="false" /> Não
+      </label>
+      <p *ngIf="loginForm.get('VT')?.invalid && loginForm.get('VT')?.touched">
+        Recebe VT ?
+      </p>      
+      <!---->
+    <br>
+    <button type="submit">Entrar</button>
+  </form>
+  
+<!--Erros de validação-->
+  <p *ngIf="loginForm.get('salario')?.errors?.['min']">
+    O salário deve ser no mínimo R$ 1518,00.
+  </p>
+  <p *ngIf="loginForm.get('nDependentes')?.errors?.['max']">
+        O número máximo de dependentes é 4.
+  </p>
+  <p *ngIf="loginForm.get('nomeCompleto')?.errors?.['minlength']">
+    O nome deve possuir no mínimo 10 caracteres.
+</p>
