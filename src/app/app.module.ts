@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CadastroFuncionario } from './components/cadastro-funcionario/cadastro-funcionario';
 import { AdminComponent } from './components/admin.component/admin.component';
-import { ConfigComponent } from './config/config.component';
-import { HomeComponent } from './home/home.component';
+import { ConfigComponent } from './components/config/config.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
