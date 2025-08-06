@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,6 +9,17 @@ import { ConfigComponent } from './components/config/config.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListaFuncionariosComponent } from './components/lista-funcionarios/lista-funcionarios.component';
 import {MatTableModule} from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MenuComponent } from './components/menu/menu.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AtualizarFuncionarioComponent } from './components/atualizar-funcionario/atualizar-funcionario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -18,15 +28,28 @@ import {MatTableModule} from '@angular/material/table';
     AdminComponent,
     ConfigComponent,
     HomeComponent,
-    ListaFuncionariosComponent
+    ListaFuncionariosComponent,
+    MenuComponent,
+    ProfileComponent,
+    AtualizarFuncionarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatInputModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
