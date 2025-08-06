@@ -1,0 +1,39 @@
+=================================================================================================================================================================================
+<nav>
+  <a routerLink="/listaF"> Lista de Funcionário</a>
+  <br />
+  <a routerLink="/config">Configurações</a>
+  <br />
+  <a routerLink="/cadastroF">CadastrarTeste</a>
+</nav>
+=================================================================================================================================================================================
+<br />
+<br />
+
+<button mat-icon-button [matMenuTriggerFor]="menuPerfil">
+  <!--marca o disparo do menu ao apertar botão-->
+  <mat-icon>account_circle</mat-icon>
+</button>
+<br />
+<br />
+
+<!-- menu suspenso -->
+
+<div class="form-grid">
+  <mat-menu #menuPerfil="matMenu">
+    <!--#menuPerfil é o nome que deve ser colocado no botão -->
+    <div style="padding: 8px 16px">
+      <strong>{{ nomeUsuario }}</strong>
+    </div>
+    <button mat-menu-item [routerLink]="'/profile'">
+      <mat-icon>person</mat-icon>
+      <span>Ver Perfil</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Sair</span>
+    </button>
+  </mat-menu>
+</div>
+
+=================================================================================================================================================================================
