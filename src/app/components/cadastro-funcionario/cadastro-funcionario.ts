@@ -4,7 +4,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-cadastro-funcionario',
   standalone: false,
-  templateUrl: './cadastro-funcionario.component.html'
+  templateUrl: './cadastro-funcionario.html',
+  styleUrls: ['./cadastro-funcionario.css']
 })
 export class CadastroFuncionario {
 

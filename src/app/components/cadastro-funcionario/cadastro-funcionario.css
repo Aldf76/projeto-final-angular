@@ -1,0 +1,12 @@
+.mat-mdc-input-element {
+  color: black !important;
+  caret-color: black !important;
+}
+
+.mat-mdc-form-field-infix {
+  background-color: white !important;
+}
+.mat-field-spacing {
+  margin-bottom: 10px; 
+}
+
