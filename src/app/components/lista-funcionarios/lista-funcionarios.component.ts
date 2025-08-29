@@ -18,13 +18,17 @@ export class ListaFuncionariosComponent {
 
   constructor(private router: Router, private FuncionarioService: FuncionarioService) {
     this.dataSource.data = this.FuncionarioService.getFuncionarios();
+    console.log('Dados carregados:', this.dataSource.data);
   }
 
   editarFuncionario(element: any) { // passa os atributos que serão exibidos no ng On Init da /atualizarF . 
 
-    console.log('element recebido', element);
 
-    this.router.navigate(['/AtualizarF', element.id], {
+
+    console.log('element recebido', element);
+    console.log('element.id:', element.id);
+
+    this.router.navigate(['/atualizarF', element.id], {
       state: {
 
       nome: element.nome,
