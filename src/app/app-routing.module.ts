@@ -15,7 +15,7 @@ const routes: Routes = [
   
   // Funcionários
   { path: 'cadastroF', component: CadastroFuncionario, canActivate: [AuthGuard] },
-  { path: 'atualizarF', component: AtualizarFuncionarioComponent },
+  { path: 'atualizarF', component: AtualizarFuncionarioComponent, canActivate: [AuthGuard] },
   { path: 'atualizarF/:id', component: AtualizarFuncionarioComponent, canActivate: [AuthGuard] },
   { path: 'listaF', component: ListaFuncionariosComponent, canActivate: [AuthGuard] },
   
