@@ -19,6 +19,11 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AtualizarFuncionarioComponent } from './components/atualizar-funcionario/atualizar-funcionario.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule }    from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 @NgModule({
@@ -31,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListaFuncionariosComponent,
     MenuComponent,
     ProfileComponent,
-    AtualizarFuncionarioComponent
+    AtualizarFuncionarioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +51,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatRadioModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule
   ],
   providers: [
 
