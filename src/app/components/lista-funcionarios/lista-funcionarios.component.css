@@ -2,3 +2,16 @@ table {
     width: 55%;
   }
   
+  .nome-cell {
+    position: relative;
+    padding-right: 10px; 
+  }
+  
+  .eye-link {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    line-height: 0;
+  }
+  
