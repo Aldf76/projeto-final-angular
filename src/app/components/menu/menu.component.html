@@ -1,39 +1,76 @@
-=================================================================================================================================================================================
-<nav>
-  <a routerLink="/listaF"> Lista de Funcionário</a>
-  <br />
-  <a routerLink="/config">Configurações</a>
-  <br />
-  <a routerLink="/cadastroF">CadastrarTeste</a>
-</nav>
-=================================================================================================================================================================================
-<br />
-<br />
-
-<button mat-icon-button [matMenuTriggerFor]="menuPerfil">
-  <!--marca o disparo do menu ao apertar botão-->
-  <mat-icon>account_circle</mat-icon>
-</button>
-<br />
-<br />
-
-<!-- menu suspenso -->
-
-<div class="form-grid">
-  <mat-menu #menuPerfil="matMenu">
-    <!--#menuPerfil é o nome que deve ser colocado no botão -->
-    <div style="padding: 8px 16px">
-      <strong>{{ nomeUsuario }}</strong>
-    </div>
-    <button mat-menu-item [routerLink]="'/profile'">
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" position="start">
+    <div class="menu-header">
+      <button
+      mat-button
+      [matMenuTriggerFor]="menuPerfil"
+      aria-label="Abrir menu do usuário"
+      class="perfil-button"
+    >
       <mat-icon>person</mat-icon>
-      <span>Ver Perfil</span>
+      <span>Perfil</span>
     </button>
-    <button mat-menu-item (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      <span>Sair</span>
-    </button>
-  </mat-menu>
-</div>
 
-=================================================================================================================================================================================
+      <!-- menu suspenso adaptado -->
+      <mat-menu #menuPerfil="matMenu">
+        <div style="padding: 8px 16px">
+          <strong>{{ nomeUsuario }}</strong>
+        </div>
+        <button mat-menu-item [routerLink]="'/profile'">
+          <mat-icon>person</mat-icon>
+          <span>Ver Perfil</span>
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Sair</span>
+        </button>
+      </mat-menu>
+    </div>
+
+    <!--Menu com router link-->
+    <mat-nav-list>
+      <div class="main-menu">
+        <button mat-raised-button (click)="cadastroFuncionario()"  class="menu-button">
+          <mat-icon>person_add</mat-icon>
+          <span>Cadastro de Funcionário</span>
+        </button>
+       
+        <button mat-raised-button (click)="atualizarFuncionario()" class="menu-button">
+          <mat-icon>edit</mat-icon>
+          <span>Atualizar Cadastro</span>
+        </button>
+       
+        <button mat-raised-button (click)="listaFuncionarios()" class="menu-button">
+          <mat-icon>list_alt</mat-icon>
+          <span>Lista de Funcionários</span>
+        </button>
+       
+        <button mat-raised-button (click)="irConfiguracoes()" class="menu-button">
+          <mat-icon>settings</mat-icon>
+          <span>Configurações</span>
+        </button>
+       </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <!-- conteúdo à direita e principal -->
+  <mat-drawer-content class="example-sidenav-content">
+    <!-- Toolbar -->
+    <mat-toolbar color="primary" class="topbar">
+      <button
+        mat-icon-button
+        (click)="drawer.toggle()"
+        aria-label="Alternar menu"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="spacer"></span>
+    </mat-toolbar>
+
+    <!-- aqui renderizam-se as rotas do menu paralelo-->
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

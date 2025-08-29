@@ -1,9 +1,77 @@
-.mat-form-field-appearance-outline .mat-form-field-infix {
-    background-color: white !important;
-    color: black !important;
-  }
-  
-  .mat-input-element {
-    color: black !important;
-  }
-  
+/* Container principal */
+html, body { height: 100%; margin: 0; }
+.example-container { height: 100vh; }
+
+/* Menu lateral */
+.example-sidenav {
+  width: 260px;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho do menu */
+.menu-header { 
+  padding: 0 16px 8px; 
+}
+
+/* Botão Perfil */
+.perfil-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: flex-start;
+  text-transform: none;
+  padding: 8px 0;
+}
+
+/* Botões do menu principal */
+.menu-button {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: flex-start;
+  text-transform: none !important;
+  margin-bottom: 8px !important;
+  padding: 12px 16px !important;
+  box-shadow: none !important;
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #ddd !important;
+}
+
+.menu-button:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.menu-button mat-icon {
+  margin-right: 0 !important;
+}
+
+/* Container dos botões */
+.main-menu {
+  padding: 0 16px;
+}
+
+/* Toolbar */
+.topbar { 
+  position: sticky; 
+  top: 0; 
+  z-index: 1; 
+}
+
+.spacer { 
+  flex: 1 1 auto; 
+}
+
+/* Conteúdo */
+.example-sidenav-content { 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100%; 
+}
+
+.page-content { 
+  padding: 16px; 
+}
